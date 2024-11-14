@@ -1,7 +1,7 @@
 # MATHEso
 
 Welcome to MATHEso (Pronounced "ma-thee-so")!
-MATHEso is a type of Esolang that runs entirely based on Math! Instead of regular function, like `function main() {}` or `public static void main () {}`, MATHEso uses the format `f(x) = mx + b;`, among other functions. Variables are defined like they are in python, like `a = 1`. String 
+MATHEso is a type of Esolang that runs entirely based on Math! Instead of regular function, like `function main() {}` or `public static void main () {}`, MATHEso uses the format `f(x) = mx + b;`, among other functions. Variables are defined like they are in python, like `a = 1`. Stringed characters are not accepted, and it will read them as multiplication. 
 
 > For those who don't know, TypeScript is a great coding language for creating your own coding languages. I highly recomend finding tutorials if you are interested in creating your own programming language. Currently I have no recomendations, but there are some great tutorials on YouTube if you're interested!
 
