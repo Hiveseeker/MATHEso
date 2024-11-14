@@ -9,4 +9,4 @@ MATHEso is a type of Esolang that runs entirely based on Math! Instead of regula
 ##### This coding language is a WIP!
 I will provide usage and download instructions when I finish this coding language! I currently have finished up the base lexer for my code. Please contact me at [victormer235@gmail.com] if you have any questions.
 
-## I MAY PUT OUT A GUIDE ON HOW TO MAKE YOUR OWN CODING LANGUAGE!
+### I MAY PUT OUT A GUIDE ON HOW TO MAKE YOUR OWN CODING LANGUAGE!
