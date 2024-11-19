@@ -1,8 +1,8 @@
-type TokenType = 'NUMBER' | 'IDENTIFIER' | 'OPERATOR' | 'WHITESPACE' | 'OPENPAREN' | 'CLOSEDPAREN' | 'SEMICOLON' | 'EOF';
+type TokenType = 'NUMBER' | 'IDENTIFIER' | 'OPERATOR' | 'WHITESPACE' | 'OPENPAREN' | 'CLOSEDPAREN' | 'SEMICOLON' | 'DOUBLEQUOTE' | 'EOF';
 
 interface Token {
     type: TokenType;
-    value: String;
+    value: string;
 }
 
 function lexer(input: string): Token[] {
@@ -44,16 +44,23 @@ function lexer(input: string): Token[] {
 
         // Test if the current character is an '('
         if (char === '(') {
-            let openparen = char
-            tokens.push({type: 'OPENPAREN', value: openparen});
+            let openParen = char
+            tokens.push({type: 'OPENPAREN', value: openParen});
             i++;
             continue;
         }
 
         // Test if the current character is a ')'
         if (char === ')') {
-            let closedparen = char;
-            tokens.push({type: 'CLOSEDPAREN', value: closedparen});
+            let closedParen = char;
+            tokens.push({type: 'CLOSEDPAREN', value: closedParen});
+            i++;
+            continue;
+        }
+
+        if (char === '"') {
+            let doubleQuote = char
+            tokens.push({type: 'DOUBLEQUOTE', value: doubleQuote});
             i++;
             continue;
         }
