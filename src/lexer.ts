@@ -1,11 +1,11 @@
-type TokenType = 'NUMBER' | 'IDENTIFIER' | 'OPERATOR' | 'WHITESPACE' | 'OPENPAREN' | 'CLOSEDPAREN' | 'SEMICOLON' | 'DOUBLEQUOTE' | 'EOF';
+type TokenType = 'NUMBER' | 'IDENTIFIER' | 'OPERATOR' | 'WHITESPACE' | 'OPENPAREN' | 'CLOSEDPAREN' | 'SEMICOLON' | 'DOUBLEQUOTE' | 'OPENCURLY' | 'CLOSEDCURLY' | 'EOF';
 
-interface Token {
+export interface Token {
     type: TokenType;
     value: string;
 }
 
-function lexer(input: string): Token[] {
+export function lexer(input: string): Token[] {
     const tokens: Token[] = [];
     let i = 0;
 
@@ -76,6 +76,22 @@ function lexer(input: string): Token[] {
         if (char === ';') {
             let semicolon = char;
             tokens.push({type: 'SEMICOLON', value: semicolon});
+            i++;
+            continue;
+        }
+
+        // Test if the current character is a '{'
+        if (char === '{') {
+            let openCurly = char;
+            tokens.push({type: 'OPENCURLY', value: openCurly});
+            i++;
+            continue;
+        }
+
+        //test if the current character is a '}'
+        if (char === '}') {
+            let closedCurly = char;
+            tokens.push({type: 'CLOSEDCURLY', value: closedCurly});
             i++;
             continue;
         }
